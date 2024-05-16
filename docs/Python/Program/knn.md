@@ -2,7 +2,7 @@
 
 ## 使用欧氏距离和FOR循环，实现KNN算法，利用所提供的手写数字识别数据集对KNN进行训练
 
-```
+```python
 import numpy as np
 from os import listdir
 def loadDataSet():
@@ -80,7 +80,7 @@ def myKNN(testDigit,trainX,trainY,k):
             maxCount = value
             maxLabel = key
     return maxLabel
-      
+    
 train_x,train_y,test_x,test_y=loadDataSet()#将训练集测试集处理好存储好
 numTestSamples=test_x.shape[0]#返回样本的个数
 matchCount=0
@@ -104,7 +104,7 @@ print("accuracy is {:.2f}%".format(accuracy*100))#输出准确率
 
 ## 手写字体的读入、规范和识别
 
-```
+```python
 from PIL import Image
 import numpy as np
 from matplotlib import pyplot as plt
@@ -131,7 +131,7 @@ print(label)#输出识别的结果
 
 ## 对鸢尾花数据集进行训练和预测
 
-```
+```python
 from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_iris
 from sklearn.neighbors import KNeighborsClassifier
